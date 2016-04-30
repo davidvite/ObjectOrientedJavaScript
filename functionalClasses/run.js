@@ -1,4 +1,4 @@
-var amy = carlike({},1);
+var amy = Car(1);
 amy.move();
-var been = carlike({}, 9);
+var been = Car(9);
 been.move();
