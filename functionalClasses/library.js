@@ -1,13 +1,13 @@
-// there is a way to include all the methods we want on every car object as a resul of having them in a list somewhere.
-// extend methods using extend and creating an object with the methods.
+// At this point is nice the class but there is a little problem the var methods is a little confuse so instead of using it like that
+// we wil add it as a property of the Car function called methods. (encapsulating )
 
 var Car = function(loc){
 	var obj= {loc: loc};
-	extend(obj, methods);
+	extend(obj, Car.methods);
 	return obj;
 	};
 
-var methods = {
+Car.methods = {
 	move : function(){
 	this.obj++;
 	},
