@@ -1,5 +1,5 @@
-// At this point is nice the class but there is a little problem the var methods is a little confuse so instead of using it like that
-// we wil add it as a property of the Car function called methods. (encapsulating )
+// Remember that functions are specialized objects function are capable of beeing call and also store properties.
+// just like any other object 
 
 var Car = function(loc){
 	var obj= {loc: loc};
