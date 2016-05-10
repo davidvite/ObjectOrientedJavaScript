@@ -26,3 +26,10 @@ Car.prototype = {
 	// something else here
 	}
 };
+
+// The language creates and object but do not delegates to key.methods instead delegates to key.prototype.
+// Since I know this object is going to be created for me, and all I really need to do es add a move method, 
+// I can take our the object literal. And all I really need to do, is define a method .move on an existing .prototype
+//  object (line 6above). Since we change the Car.method object the new Car instance can’t reach car.methods because 
+//  we change it so we need to refactor line 2 in order to reflect the use of the provider container object, 
+//  which is now stored at Car. prototype.
