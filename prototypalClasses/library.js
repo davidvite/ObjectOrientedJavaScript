@@ -33,3 +33,21 @@ Car.prototype = {
 //  object (line 6above). Since we change the Car.method object the new Car instance can’t reach car.methods because 
 //  we change it so we need to refactor line 2 in order to reflect the use of the provider container object, 
 //  which is now stored at Car. prototype.
+
+// How prototypes affect in-memorymodel (Nothing)
+// Now instead of copying all the methods into the function we make it fallback into the key.prototype .
+// .prototype nothing has change and the don’t affect how the code works we just chose to use another
+//  name to talk about our stooges object and it was provided by the language.
+// This is purely cosmetic to use .prototype instead of .method
+
+// Note***
+// The car function does not delegates it’s failed lookups to the object stored at Car.prototype.
+//  It was not doing that with Car.methods, so we shouldn’t expect that.
+// Other point is that result object from the Car function only delegates to Car.prototype because 
+// of our own call to the object.create function( Car.prototype in the parenthesis)  and not because 
+// we are using the key.prototype to store this object that we have a relationship between instances 
+// and the Car.prototype object.
+// So you should really see this .prototype object as a freely provided object for storing things with 
+// no additional special characteristics.
+
+// If you want to can substitute mentally prototype with methods if that helps.
