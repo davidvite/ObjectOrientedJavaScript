@@ -51,3 +51,21 @@ Car.prototype = {
 // no additional special characteristics.
 
 // If you want to can substitute mentally prototype with methods if that helps.
+
+// Prototype ambiguity .
+// methods container object is the prototype object
+
+// Some tricky words
+// If someone says object one’s prototype is object two, a reasonable interpretation would be to think that 
+// fail  lookups on this first object should fall through to the second one. So you might say Amy’s prototype 
+// is car.prototype, but this is not the relationship that car has with car.prototype. In that case car is a function object
+//  and fail lookups on it will fall through to some function prototype , where all function object delegate their fail lookups.
+
+// The car function relationship with car.prototype is very different from the one that Amy has with car.prototype .
+
+// The relationship reflects the second interpretation of the statement, “object one’s prototype is object two”. 
+// The relationship is that when a car function runs, it will create objects that delegate their fall lookups to car.prototype .
+
+// So in this sense, you might say, cars prototype is car.prototype . So to review, saying Amy’s prototype is  car.prototype 
+// means something different from saying cars prototype is car.prototype even though those sentences look so similar.
+// Be aware that is easy to confuse those 2 uses of the word prototype .
