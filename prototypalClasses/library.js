@@ -69,3 +69,14 @@ Car.prototype = {
 // So in this sense, you might say, cars prototype is car.prototype . So to review, saying Amy’s prototype is  car.prototype 
 // means something different from saying cars prototype is car.prototype even though those sentences look so similar.
 // Be aware that is easy to confuse those 2 uses of the word prototype .
+
+
+
+// Prototype constructor
+
+// prototypes objects come with one extra convenient property that almost no other object has. Every dot prototype object 
+// has a .constructor property with points back to the function is came attached to. Thus there is a mutual linking between
+//  any new function and it’s companion.protoype object, because car links to .prototype object , 
+//  and prototype links back to the car object Car.prototypeconstrutor is car itself . The main use is that you can figure out
+//   which constructor function built a certain object. All instances of a class delegate their fail lookups to their prototype, 
+//   and so they should all report as having the same constructor function .
