@@ -15,18 +15,12 @@ var Car = function(loc){
 	return obj;
 	};
 
-Car.prototype = {
-	move : function(){
+Car.prototype.move = function(){
 	this.obj++;
-	},
- 	on = function(){
-	// something here
-	},
- 	off = function(){
-	// something else here
-	}
 };
-
+console.log(Car.prototype.constructor);
+console.log(amy.constructor);
+log(amy instanceof Car) ; 
 // The language creates and object but do not delegates to key.methods instead delegates to key.prototype.
 // Since I know this object is going to be created for me, and all I really need to do es add a move method, 
 // I can take our the object literal. And all I really need to do, is define a method .move on an existing .prototype
