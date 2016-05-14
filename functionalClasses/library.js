@@ -9,7 +9,7 @@ var Car = function(loc){
 
 Car.methods = {
 	move : function(){
-	this.obj++;
+	this.loc++;
 	},
  	on = function(){
 	// something here

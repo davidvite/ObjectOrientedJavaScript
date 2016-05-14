@@ -16,7 +16,7 @@ var Car = function(loc){
 	};
 
 Car.prototype.move = function(){
-	this.obj++;
+	this.loc++;
 };
 console.log(Car.prototype.constructor);
 console.log(amy.constructor);
